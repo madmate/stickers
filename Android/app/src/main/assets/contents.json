@@ -1,5 +1,5 @@
 {
-  "android_play_store_link": "",
+  "android_play_store_link": "https://play.google.com/store/apps/details?id=xyz.madmate.wastickers",
   "ios_app_store_link": "",
   "sticker_packs": [
     {
@@ -56,6 +56,51 @@
         },
         {
           "image_file": "15_MichelYoung.webp"
+        },
+        {
+          "image_file": "IBIMSKEVIN.webp"
+        },
+        {
+          "image_file": "JohannFace01.webp"
+        },
+        {
+          "image_file": "LucasFace02.webp"
+        },
+        {
+          "image_file": "TilFace01.webp"
+        },
+        {
+          "image_file": "TokiFace02.webp"
+        },
+        {
+          "image_file": "MarkusFace01.webp"
+        },
+        {
+          "image_file": "MartenFace01.webp"
+        },
+        {
+          "image_file": "TilFace02.webp"
+        },
+        {
+          "image_file": "TokiFace03.webp"
+        },
+        {
+          "image_file": "LongFace01.webp"
+        },
+        {
+          "image_file": "LucasFace03.webp"
+        },
+        {
+          "image_file": "WUCHATHINKINABOUT_Markus.webp"
+        },
+        {
+          "image_file": "WUCHATHINKINABOUT_Michel.webp"
+        },
+        {
+          "image_file": "TokiMarkus.webp"
+        },
+        {
+          "image_file": "TokiFace04.webp"
         }
       ]
     }
