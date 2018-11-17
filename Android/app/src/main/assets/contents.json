@@ -23,6 +23,57 @@
         {
           "image_file": "03_LucasFace01.webp",
           "emojis": ["🔋","😵"]
+        },
+        {
+          "image_file": "04_MatthiasShipCroatia.webp",
+          "emojis": ["🔋","😵"]
+        },
+        {
+          "image_file": "05_MartenBald.webp",
+          "emojis": ["🔋","😵"]
+        },
+        {
+          "image_file": "06_TokiCheeseHolsten.webp",
+          "emojis": ["🔋","😵"]
+        },
+        {
+          "image_file": "07_MarkusKnife.webp",
+          "emojis": ["🔋","😵"]
+        },
+        {
+          "image_file": "08_TilUmbrella.webp",
+          "emojis": ["🔋","😵"]
+        },
+        {
+          "image_file": "09_HolstenBock.webp",
+          "emojis": ["🔋","😵"]
+        },
+        {
+          "image_file": "10_AntonIceAirport.webp",
+          "emojis": ["🔋","😵"]
+        },
+        {
+          "image_file": "11_TokiBeachCroatia.webp",
+          "emojis": ["🔋","😵"]
+        },
+        {
+          "image_file": "12_BarcadiPeach.webp",
+          "emojis": ["🔋","😵"]
+        },
+        {
+          "image_file": "13_PoliceMarie.webp",
+          "emojis": ["🔋","😵"]
+        },
+        {
+          "image_file": "14_MarkusNippel.webp",
+          "emojis": ["🔋","😵"]
+        },
+        {
+          "image_file": "15_MichelYoung.webp",
+          "emojis": [
+            "🔋",
+            "😵"
+          ]
         }
       ]
     }
