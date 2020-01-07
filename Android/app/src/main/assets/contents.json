@@ -4,9 +4,9 @@
   "sticker_packs": [
     {
       "identifier": "1",
-      "name": "BFW Crew and Friends",
+      "name": "BFW Crew and Friends 1",
       "publisher": "BFW",
-      "tray_image_file": "tray_BFW.png",
+      "tray_image_file": "tray_BFW_1.png",
       "publisher_email":"",
       "publisher_website": "",
       "privacy_policy_website": "",
@@ -101,6 +101,48 @@
         },
         {
           "image_file": "TokiFace04.webp"
+        }
+      ]
+    },
+    {
+      "identifier": "2",
+      "name": "BFW Crew and Friends 2",
+      "publisher": "BFW",
+      "tray_image_file": "tray_BFW_2.png",
+      "publisher_email":"",
+      "publisher_website": "",
+      "privacy_policy_website": "",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "AnnaMarie.webp"
+        },
+        {
+          "image_file": "Johann_Dumm.webp"
+        },
+        {
+          "image_file": "Markus_High.webp"
+        },
+        {
+          "image_file": "MarkusNoe.webp"
+        },
+        {
+          "image_file": "Marten_dumm.webp"
+        },
+        {
+          "image_file": "MartenAha.webp"
+        },
+        {
+          "image_file": "MartenOchNe.webp"
+        },
+        {
+          "image_file": "PhilipKrank.webp"
+        },
+        {
+          "image_file": "Til_Surprise.webp"
+        },
+        {
+          "image_file": "TokiDisgusting.webp"
         }
       ]
     }
