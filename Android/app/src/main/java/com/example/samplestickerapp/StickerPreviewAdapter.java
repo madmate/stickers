@@ -8,20 +8,21 @@
 
 package com.example.samplestickerapp;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 public class StickerPreviewAdapter extends RecyclerView.Adapter<StickerPreviewViewHolder> {
 
     @NonNull
-    private StickerPack stickerPack;
+    private final StickerPack stickerPack;
 
     private final int cellSize;
-    private int cellLimit;
-    private int cellPadding;
+    private final int cellLimit;
+    private final int cellPadding;
     private final int errorResource;
 
     private final LayoutInflater layoutInflater;
@@ -43,7 +44,7 @@ public class StickerPreviewAdapter extends RecyclerView.Adapter<StickerPreviewVi
     @NonNull
     @Override
     public StickerPreviewViewHolder onCreateViewHolder(@NonNull final ViewGroup viewGroup, final int i) {
-        View itemView = layoutInflater.inflate(R.layout.sticker_image, viewGroup, false);
+        View itemView = layoutInflater.inflate(R.layout.sticker_image_item, viewGroup, false);
         StickerPreviewViewHolder vh = new StickerPreviewViewHolder(itemView);
 
         ViewGroup.LayoutParams layoutParams = vh.stickerPreviewView.getLayoutParams();

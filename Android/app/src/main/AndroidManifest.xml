@@ -4,6 +4,7 @@
     package="com.example.samplestickerapp">
 
     <application
+        android:name=".StickerApplication"
         android:allowBackup="false"
         android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
@@ -18,9 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".StickerPackListActivity"
-            android:label="@string/title_activity_sticker_packs_list" />
+        <activity android:name=".StickerPackListActivity" />
         <activity
             android:name=".StickerPackDetailsActivity"
             android:parentActivityName=".StickerPackListActivity"

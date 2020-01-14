@@ -8,20 +8,21 @@
 
 package com.example.samplestickerapp;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class StickerPackListItemViewHolder extends RecyclerView.ViewHolder {
+import androidx.recyclerview.widget.RecyclerView;
 
-    View container;
-    TextView titleView;
-    TextView publisherView;
-    TextView filesizeView;
-    ImageView addButton;
-    LinearLayout imageRowView;
+class StickerPackListItemViewHolder extends RecyclerView.ViewHolder {
+
+    final View container;
+    final TextView titleView;
+    final TextView publisherView;
+    final TextView filesizeView;
+    final ImageView addButton;
+    final LinearLayout imageRowView;
 
     StickerPackListItemViewHolder(final View itemView) {
         super(itemView);

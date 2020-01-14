@@ -12,7 +12,8 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -23,6 +24,7 @@ import java.util.HashSet;
 import java.util.List;
 
 import static com.example.samplestickerapp.StickerContentProvider.ANDROID_APP_DOWNLOAD_LINK_IN_QUERY;
+import static com.example.samplestickerapp.StickerContentProvider.AVOID_CACHE;
 import static com.example.samplestickerapp.StickerContentProvider.IOS_APP_DOWNLOAD_LINK_IN_QUERY;
 import static com.example.samplestickerapp.StickerContentProvider.LICENSE_AGREENMENT_WEBSITE;
 import static com.example.samplestickerapp.StickerContentProvider.PRIVACY_POLICY_WEBSITE;
@@ -34,14 +36,15 @@ import static com.example.samplestickerapp.StickerContentProvider.STICKER_PACK_I
 import static com.example.samplestickerapp.StickerContentProvider.STICKER_PACK_IDENTIFIER_IN_QUERY;
 import static com.example.samplestickerapp.StickerContentProvider.STICKER_PACK_NAME_IN_QUERY;
 import static com.example.samplestickerapp.StickerContentProvider.STICKER_PACK_PUBLISHER_IN_QUERY;
+import static com.example.samplestickerapp.StickerContentProvider.IMAGE_DATA_VERSION;
 
-public class StickerPackLoader {
+class StickerPackLoader {
 
     /**
      * Get the list of sticker packs for the sticker content provider
      */
     @NonNull
-    public static ArrayList<StickerPack> fetchStickerPacks(Context context) throws IllegalStateException {
+    static ArrayList<StickerPack> fetchStickerPacks(Context context) throws IllegalStateException {
         final Cursor cursor = context.getContentResolver().query(StickerContentProvider.AUTHORITY_URI, null, null, null, null);
         if (cursor == null) {
             throw new IllegalStateException("could not fetch from content provider, " + BuildConfig.CONTENT_PROVIDER_AUTHORITY);
@@ -100,7 +103,9 @@ public class StickerPackLoader {
             final String publisherWebsite = cursor.getString(cursor.getColumnIndexOrThrow(PUBLISHER_WEBSITE));
             final String privacyPolicyWebsite = cursor.getString(cursor.getColumnIndexOrThrow(PRIVACY_POLICY_WEBSITE));
             final String licenseAgreementWebsite = cursor.getString(cursor.getColumnIndexOrThrow(LICENSE_AGREENMENT_WEBSITE));
-            final StickerPack stickerPack = new StickerPack(identifier, name, publisher, trayImage, publisherEmail, publisherWebsite, privacyPolicyWebsite, licenseAgreementWebsite);
+            final String imageDataVersion = cursor.getString(cursor.getColumnIndexOrThrow(IMAGE_DATA_VERSION));
+            final boolean avoidCache = cursor.getShort(cursor.getColumnIndexOrThrow(AVOID_CACHE)) > 0;
+            final StickerPack stickerPack = new StickerPack(identifier, name, publisher, trayImage, publisherEmail, publisherWebsite, privacyPolicyWebsite, licenseAgreementWebsite, imageDataVersion, avoidCache);
             stickerPack.setAndroidPlayStoreLink(androidPlayStoreLink);
             stickerPack.setIosAppStoreLink(iosAppLink);
             stickerPackList.add(stickerPack);
@@ -129,7 +134,7 @@ public class StickerPackLoader {
         return stickers;
     }
 
-    public static byte[] fetchStickerAsset(@NonNull final String identifier, @NonNull final String name, ContentResolver contentResolver) throws IOException {
+    static byte[] fetchStickerAsset(@NonNull final String identifier, @NonNull final String name, ContentResolver contentResolver) throws IOException {
         try (final InputStream inputStream = contentResolver.openInputStream(getStickerAssetUri(identifier, name));
              final ByteArrayOutputStream buffer = new ByteArrayOutputStream()) {
             if (inputStream == null) {
@@ -149,7 +154,7 @@ public class StickerPackLoader {
         return new Uri.Builder().scheme(ContentResolver.SCHEME_CONTENT).authority(BuildConfig.CONTENT_PROVIDER_AUTHORITY).appendPath(StickerContentProvider.STICKERS).appendPath(identifier).build();
     }
 
-    public static Uri getStickerAssetUri(String identifier, String stickerName) {
+    static Uri getStickerAssetUri(String identifier, String stickerName) {
         return new Uri.Builder().scheme(ContentResolver.SCHEME_CONTENT).authority(BuildConfig.CONTENT_PROVIDER_AUTHORITY).appendPath(StickerContentProvider.STICKERS_ASSET).appendPath(identifier).appendPath(stickerName).build();
     }
 }

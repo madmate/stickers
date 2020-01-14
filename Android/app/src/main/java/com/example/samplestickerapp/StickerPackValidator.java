@@ -11,11 +11,12 @@ package com.example.samplestickerapp;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
 import android.webkit.URLUtil;
+
+import androidx.annotation.NonNull;
 
 import com.facebook.animated.webp.WebPImage;
 
@@ -24,7 +25,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
-public class StickerPackValidator {
+class StickerPackValidator {
     private static final int STICKER_FILE_SIZE_LIMIT_KB = 100;
     private static final int EMOJI_LIMIT = 3;
     private static final int IMAGE_HEIGHT = 512;
@@ -139,7 +140,7 @@ public class StickerPackValidator {
                     throw new IllegalStateException("sticker width should be " + IMAGE_WIDTH + ", sticker pack identifier:" + identifier + ", filename:" + fileName);
                 }
                 if (webPImage.getFrameCount() > 1) {
-                    throw new IllegalStateException("sticker shoud be a static image, no animated sticker support at the moment, sticker pack identifier:" + identifier + ", filename:" + fileName);
+                    throw new IllegalStateException("sticker should be a static image, no animated sticker support at the moment, sticker pack identifier:" + identifier + ", filename:" + fileName);
                 }
             } catch (IllegalArgumentException e) {
                 throw new IllegalStateException("Error parsing webp image, sticker pack identifier:" + identifier + ", filename:" + fileName, e);
