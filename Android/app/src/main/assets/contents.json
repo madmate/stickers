@@ -149,6 +149,76 @@
           "image_file": "TokiDisgusting.webp"
         }
       ]
+    },
+    {
+      "identifier": "3",
+      "name": "Marc",
+      "publisher": "MadMate",
+      "tray_image_file": "tray_marc.png",
+      "image_data_version":"1",
+      "avoid_cache":false,
+      "publisher_email":"",
+      "publisher_website": "",
+      "privacy_policy_website": "",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "marc_01.webp"
+        },
+        {
+          "image_file": "marc_02.webp"
+        },
+        {
+          "image_file": "marc_03.webp"
+        },
+        {
+          "image_file": "marc_04.webp"
+        },
+        {
+          "image_file": "marc_05.webp"
+        },
+        {
+          "image_file": "marc_06.webp"
+        },
+        {
+          "image_file": "marc_overall_face.webp"
+        },
+        {
+          "image_file": "marc_overall_full.webp"
+        }
+      ]
+    },
+    {
+      "identifier": "4",
+      "name": "Dome",
+      "publisher": "MadMate",
+      "tray_image_file": "tray_dome.png",
+      "image_data_version":"1",
+      "avoid_cache":false,
+      "publisher_email":"",
+      "publisher_website": "",
+      "privacy_policy_website": "",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "dome_01.webp"
+        },
+        {
+          "image_file": "dome_02.webp"
+        },
+        {
+          "image_file": "dome_03.webp"
+        },
+        {
+          "image_file": "dome_04.webp"
+        },
+        {
+          "image_file": "dome_05.webp"
+        },
+        {
+          "image_file": "dome_06.webp"
+        }
+      ]
     }
   ]
 }
